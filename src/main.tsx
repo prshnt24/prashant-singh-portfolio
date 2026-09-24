@@ -116,6 +116,7 @@ function App() {
           <h1>Building cloud<br />systems that <span className="accent-text">hold up.</span></h1>
           <p className="hero-intro">I’m Prashant Singh — a DevOps Consultant and postgraduate student in Auckland, New Zealand. I automate infrastructure, improve delivery workflows, and help cloud systems run reliably.</p>
           <div className="hero-buttons"><a className="button button-primary" href="#projects">Explore my work <ArrowRight size={16} /></a><a className="button button-quiet" href={`mailto:${email}`}>Get in touch <ArrowUpRight size={15} /></a></div>
+          <div className="hero-socials" aria-label="Social profiles"><a href="https://github.com/prshnt24" target="_blank" rel="noreferrer"><Github size={16} /> GitHub <ArrowUpRight size={13} /></a><a href="https://www.linkedin.com/in/prashant-singh-04a0471b9/" target="_blank" rel="noreferrer"><Linkedin size={16} /> LinkedIn <ArrowUpRight size={13} /></a></div>
           <div className="hero-meta"><span><span className="meta-dot" /> Available for graduate opportunities</span><span className="meta-separator">·</span><span>Auckland, New Zealand</span></div>
         </div>
 
