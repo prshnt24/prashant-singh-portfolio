@@ -102,7 +102,6 @@ function App() {
           <a className="nav-resume mobile-resume" href={publicAsset('resume.pdf')} download>Resume <ArrowDown size={13} /></a>
         </div>
         <div className="nav-actions">
-          <a className="nav-social" href="https://www.linkedin.com/in/prashant-singh-04a0471b9/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile"><Linkedin size={16} /><span>LinkedIn</span></a>
           <a className="nav-resume" href={publicAsset('resume.pdf')} download>Resume <ArrowDown size={13} /></a>
           <button className="icon-button menu-button" aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={20} /> : <Menu size={20} />}</button>
         </div>
