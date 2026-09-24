@@ -5,6 +5,7 @@ import { education, experience, projects, skillGroups } from './data';
 import './styles.css';
 
 const email = 'singhprashant2403@gmail.com';
+const publicAsset = (file: string) => `${import.meta.env.BASE_URL}${file}`;
 const nav = [
   ['About', 'about'], ['Experience', 'experience'], ['Projects', 'projects'], ['Skills', 'skills'], ['Education', 'education'], ['Research', 'research'], ['Contact', 'contact'],
 ];
@@ -98,10 +99,10 @@ function App() {
         <a className="brand" href="#top" onClick={closeMenu} aria-label="Prashant Singh, home"><span className="brand-mark">P<span>.</span></span><span className="brand-name">PRASHANT SINGH</span></a>
         <div className={`nav-links${menuOpen ? ' is-open' : ''}`}>
           {nav.map(([label, id]) => <a key={id} href={`#${id}`} className={active === id ? 'active' : ''} onClick={closeMenu}>{label}</a>)}
-          <a className="nav-resume mobile-resume" href="/resume.pdf" download>Resume <ArrowDown size={13} /></a>
+          <a className="nav-resume mobile-resume" href={publicAsset('resume.pdf')} download>Resume <ArrowDown size={13} /></a>
         </div>
         <div className="nav-actions">
-          <a className="nav-resume" href="/resume.pdf" download>Resume <ArrowDown size={13} /></a>
+          <a className="nav-resume" href={publicAsset('resume.pdf')} download>Resume <ArrowDown size={13} /></a>
           <button className="icon-button menu-button" aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={20} /> : <Menu size={20} />}</button>
         </div>
       </div>
@@ -143,7 +144,7 @@ function App() {
       </div></section>
 
       <section id="about" className="section wrap"><SectionHeading number="02" kicker="A LITTLE CONTEXT" title="Infrastructure, with intent." />
-        <div className="about-grid"><div className="about-story"><p className="lead">I like the engineering behind the scenes: the code that provisions an environment, the pipeline that makes a release repeatable, and the monitoring that tells you when something needs attention.</p><p>My experience spans hands-on DevOps roles in Melbourne and Auckland, working with AWS, Terraform, containers, scripting, and CI/CD. I’m now completing a Master of Computer and Information Sciences at Auckland University of Technology, while continuing as a part-time DevOps Consultant.</p><p>I bring a practical mindset to solving infrastructure problems: understand the system, automate the repeatable work, and keep reliability in view.</p><aside className="facts-card"><div className="facts-title"><span>PROFILE / 001</span><span className="live-dot" /></div><Fact label="LOCATION" value="Auckland, New Zealand" /><Fact label="CURRENT ROLE" value="DevOps Consultant · Part-time" /><Fact label="STUDYING" value="MCIS · Auckland University of Technology" /><Fact label="FOCUS" value="AWS · Terraform · CI/CD" /><Fact label="CAREER DIRECTION" value="Graduate cloud engineering" last /></aside></div><figure className="about-portrait"><img src="/prashant-cutout-v2.webp" alt="Portrait of Prashant Singh with the background removed" /><figcaption><span>PRASHANT SINGH</span><span>AUCKLAND · NEW ZEALAND</span></figcaption></figure></div>
+        <div className="about-grid"><div className="about-story"><p className="lead">I like the engineering behind the scenes: the code that provisions an environment, the pipeline that makes a release repeatable, and the monitoring that tells you when something needs attention.</p><p>My experience spans hands-on DevOps roles in Melbourne and Auckland, working with AWS, Terraform, containers, scripting, and CI/CD. I’m now completing a Master of Computer and Information Sciences at Auckland University of Technology, while continuing as a part-time DevOps Consultant.</p><p>I bring a practical mindset to solving infrastructure problems: understand the system, automate the repeatable work, and keep reliability in view.</p><aside className="facts-card"><div className="facts-title"><span>PROFILE / 001</span><span className="live-dot" /></div><Fact label="LOCATION" value="Auckland, New Zealand" /><Fact label="CURRENT ROLE" value="DevOps Consultant · Part-time" /><Fact label="STUDYING" value="MCIS · Auckland University of Technology" /><Fact label="FOCUS" value="AWS · Terraform · CI/CD" /><Fact label="CAREER DIRECTION" value="Graduate cloud engineering" last /></aside></div><figure className="about-portrait"><img src={publicAsset('prashant-cutout-v2.webp')} alt="Portrait of Prashant Singh with the background removed" /><figcaption><span>PRASHANT SINGH</span><span>AUCKLAND · NEW ZEALAND</span></figcaption></figure></div>
       </section>
 
       <section id="experience" className="section section-tinted"><div className="wrap"><SectionHeading number="03" kicker="WHERE I’VE WORKED" title="Experience in the systems." description="Hands-on engineering across cloud infrastructure, deployment automation, and operational support." />
